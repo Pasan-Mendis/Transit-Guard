@@ -1,5 +1,10 @@
 import 'package:final_project_hnd/SignUp/consts.dart';
+<<<<<<< Sasika
+import 'package:final_project_hnd/main.dart';
+import 'package:final_project_hnd/pages/Login/update_profiled.dart';
+=======
 import 'package:final_project_hnd/pages/Login/update_profile.dart';
+>>>>>>> Pasan
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +36,29 @@ class _LoginPageState1 extends State<LoginPage> {
               color: Colors.black,
             ),
             onPressed: () {
+<<<<<<< Sasika
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const HomeWithDrawer(),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    const begin = Offset(-1.0, 0.0);
+                    const end = Offset.zero;
+                    const curve = Curves.easeInOut;
+
+                    var tween = Tween(begin: begin, end: end)
+                        .chain(CurveTween(curve: curve));
+                    var offdetAnimation = animation.drive(tween);
+                    return SlideTransition(
+                        position: offdetAnimation, child: child);
+                  },
+                ),
+              );
+=======
               Navigator.of(context).pop();
+>>>>>>> Pasan
             },
             color: Colors.white,
           ),
@@ -61,7 +88,11 @@ class _LoginPageState1 extends State<LoginPage> {
                 ),
                 const SizedBox(height: 30),
                 Image.asset(
+<<<<<<< Sasika
+                  'assets/images/user.png',
+=======
                   image1,
+>>>>>>> Pasan
                   width: 250,
                   height: 250,
                 ),
@@ -134,7 +165,11 @@ class _LoginPageState1 extends State<LoginPage> {
                       context,
                       PageRouteBuilder(
                         pageBuilder: (context, animation, secondaryAnimation) =>
+<<<<<<< Sasika
+                            const UpdateProfileD(),
+=======
                             const UpdateProfile(),
+>>>>>>> Pasan
                         transitionsBuilder:
                             (context, animation, secondaryAnimation, child) {
                           const begin = Offset(1.0, 0.0);
